@@ -51,7 +51,7 @@ function loadSearches()
       var query = localStorage.getItem(tags[tag]);
       markup += "<li><span>" + tags[tag] + "</span>" +
          "<input id = '" + tags[tag] + "' type = 'button' " + 
-            "value = 'Edit' onclick = 'display(id)'>" +
+            "value = 'display' onclick = 'display(id)'>" +
          "<input id = '" + tags[tag] + "' type = 'button' " + 
             "value = 'Delete' onclick = 'deleteTag(id)'>";
    } // end for
