@@ -1,3 +1,13 @@
+
+var tags;
+
+function start()
+{
+   var saveButton = document.getElementById( "saveButton" );
+   saveButton.addEventListener( "click", saveSearch, false );
+   var clearButton = document.getElementById( "clearButton" );
+   clearButton.addEventListener( "click", clearAllSearches, false );
+   loadSearches(); // load the previously saved searches
 document.addEventListener('keydown', function(event){
 	const audio = document.querySelector(`audio[data-key = "${event.keyCode}"]`);
 	const key = document.querySelector(`div[data-key = "${event.keyCode}"]`);
@@ -19,15 +29,6 @@ document.addEventListener('keyup', function(event){
 		key.classList.remove('active');
 	}
 });
-var tags;
-
-function start()
-{
-   var saveButton = document.getElementById( "saveButton" );
-   saveButton.addEventListener( "click", saveSearch, false );
-   var clearButton = document.getElementById( "clearButton" );
-   clearButton.addEventListener( "click", clearAllSearches, false );
-   loadSearches(); // load the previously saved searches
 } // end function start
 
 function loadSearches() 
